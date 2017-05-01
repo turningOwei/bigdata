@@ -101,7 +101,6 @@ public class DataPushClient {
 
 	/**
 	 * 
-	 * @param <T>
 	 * @Title: getResponseObj
 	 * @Description: 根据响应后的json转换成所需response对象
 	 * @param @param json
