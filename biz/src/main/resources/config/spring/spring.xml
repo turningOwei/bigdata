@@ -15,19 +15,19 @@
 	<context:component-scan base-package="datacenterbizapiexternal" />
 
 	<bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean">
-		<property name="host" value="139.196.205.159" /><!-- 139.196.205.159 -->
+		<property name="host" value="106.14.133.61" />
 		<property name="port" value="27017" />
 	</bean>
 
 	<bean id="userCredentials" class="org.springframework.data.authentication.UserCredentials">
-		<constructor-arg name="username" value="teemaxxcdfs" />
-		<constructor-arg name="password" value="43b9a3b10c9571a7" />
+		<constructor-arg name="username" value="bigdata" />
+		<constructor-arg name="password" value="5ea97e27d76da235ae0ea3f517aa00a2" />
 	</bean>
 
 	<!-- mongodb配置 -->
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 		<constructor-arg name="mongo" ref="mongo" />
-		<constructor-arg name="databaseName" value="teemaxxcdfs" />
+		<constructor-arg name="databaseName" value="bigdata" />
 		<constructor-arg name="userCredentials" ref="userCredentials"/>
 	</bean>
 
