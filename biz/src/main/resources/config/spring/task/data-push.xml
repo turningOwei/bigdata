@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+           http://www.springframework.org/schema/data/mongo
+    	   http://www.springframework.org/schema/data/mongo/spring-mongo.xsd
+    	   http://www.springframework.org/schema/task 
+    	   http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+	<bean id="dataPushTask" class="bigdata.task.DataPushTask"/>
+	<!-- 个推数据(新昌县数据)同步更新 -->
+	<task:scheduled-tasks>
+		<!-- 每月3号 凌晨5分 -->
+		<task:scheduled ref="dataPushTask" 	method="dataPushDistributionTask"  cron="0 5 0 3 * ?"/> 
+ 		<!-- 每月3号 凌晨5分 -->
+ 		<task:scheduled ref="dataPushTask" 	method="tourTraceDistributionTask"  cron="0 5 0 3 * ?"/>
+ 		<!-- 每半个小时 --> 
+		<task:scheduled ref="dataPushTask" 	method="realTimeHeatTask"  cron="0 0/30 * * * ?"/> 
+		<!-- 每天凌晨5分统计昨天的游客总量 -->
+		<task:scheduled ref="dataPushTask" method="dailyTouristTotal" cron="0 5 0 * * ?"/>
+	<!--视频客流-->
+	<!--	&lt;!&ndash;每个小时&ndash;&gt;
+		<task:scheduled ref="dataPushTask" method="saveRandomData" cron="0 10 0/1 * * ?"/>
+		&lt;!&ndash; 每一个小时插入昨天历史数据 &ndash;&gt;
+	    <task:scheduled ref="dataPushTask" method="pushHistoryData" cron="0 0 0/1 * * ?"/> 
+		&lt;!&ndash; 每15分钟插入今日实时数据 &ndash;&gt;
+		<task:scheduled ref="dataPushTask" method="pushTodayData" cron="0 0/15 * * * ?"/>
+		&lt;!&ndash; 开启线程 &ndash;&gt;
+		<task:scheduled ref="dataPushTask" method="dateVerification" cron="0 0 0 * * ? "/>-->
+	</task:scheduled-tasks>
+</beans>   	   
+ 	

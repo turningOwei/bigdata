@@ -50,6 +50,12 @@
       <artifactId>external</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
+
+    <dependency>
+      <groupId>bigdata</groupId>
+      <artifactId>task</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
   <build>
