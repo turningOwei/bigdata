@@ -20,6 +20,7 @@
         <option value="$PROJECT_DIR$/pub/pom.xml" />
         <option value="$PROJECT_DIR$/biz/pom.xml" />
         <option value="$PROJECT_DIR$/api-external/pom.xml" />
+        <option value="$PROJECT_DIR$/task/pom.xml" />
       </list>
     </option>
   </component>

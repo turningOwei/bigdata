@@ -13,7 +13,7 @@
   </jsp-config>
   <context-param>
     <param-name>webAppRootKey</param-name>
-    <param-value>xcdfs-manag-config.root</param-value>
+    <param-value>bidata.root</param-value>
   </context-param>
   <context-param>
     <param-name>contextConfigLocation</param-name>

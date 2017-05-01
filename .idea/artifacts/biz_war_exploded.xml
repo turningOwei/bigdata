@@ -52,6 +52,9 @@
           <element id="archive" name="external-1.0-SNAPSHOT.jar">
             <element id="module-output" name="api-external" />
           </element>
+          <element id="archive" name="task-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="task" />
+          </element>
         </element>
       </element>
       <element id="directory" name="META-INF">

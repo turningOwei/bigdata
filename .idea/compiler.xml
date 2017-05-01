@@ -37,12 +37,14 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="api-external" />
+        <module name="task" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="api-external" target="1.5" />
       <module name="biz" target="1.8" />
       <module name="pub" target="1.8" />
+      <module name="task" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
