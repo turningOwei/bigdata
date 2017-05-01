@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api-external/api-external.iml" filepath="$PROJECT_DIR$/api-external/api-external.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bigdata.iml" filepath="$PROJECT_DIR$/.idea/bigdata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/biz/biz.iml" filepath="$PROJECT_DIR$/biz/biz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pub/pub.iml" filepath="$PROJECT_DIR$/pub/pub.iml" />
+    </modules>
+  </component>
+</project>
